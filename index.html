@@ -20,7 +20,7 @@
                 <div id="calc" class="col-sm-3" style="background-color:lavender;">
                     <!-- Display row with vue object -->
                     <div class="row">
-                        <div id="display" class="display">{{ display }}</div>
+                        <div id="display" class="display">{{ displayValue }}</div>
                     </div>
 
                     <!--
@@ -32,34 +32,34 @@
                     }
                     -->
                     <div class="row">
-                        <button class="col-sm key func">C</button>
+                        <button class="col-sm key func" v-on:click="clear">C</button>
                         <button class="col-sm key dud">&nbsp;</button>
                         <button class="col-sm key dud">&nbsp;</button>
-                        <button class="col-sm key func">/</button>
+                        <button class="col-sm key func" v-on:click="operatorButtonPress('/')">/</button>
                     </div>
                     <div class="row">
-                        <button class="col-sm key numeric">7</button>
-                        <button class="col-sm key numeric">8</button>
-                        <button class="col-sm key numeric">9</button>
-                        <button class="col-sm key func">X</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(7)">7</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(8)">8</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(9)">9</button>
+                        <button class="col-sm key func" v-on:click="operatorButtonPress('*')">X</button>
                     </div>
                     <div class="row">
-                        <button class="col-sm key numeric">4</button>
-                        <button class="col-sm key numeric">5</button>
-                        <button class="col-sm key numeric">6</button>
-                        <button class="col-sm key func">-</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(4)">4</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(5)">5</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(6)">6</button>
+                        <button class="col-sm key func" v-on:click="operatorButtonPress('-')">-</button>
                     </div>
                     <div class="row">
-                        <button class="col-sm key numeric">1</button>
-                        <button class="col-sm key numeric">2</button>
-                        <button class="col-sm key numeric">3</button>
-                        <button class="col-sm key func">+</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(1)">1</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(2)">2</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(3)">3</button>
+                        <button class="col-sm key func" v-on:click="operatorButtonPress('+')">+</button>
                     </div>
                     <div class="row">
-                        <button class="col-sm key numeric">0</button>
+                        <button class="col-sm key numeric" v-on:click="numericButtonPress(0)">0</button>
                         <button class="col-sm key dud">&nbsp;</button>
                         <button class="col-sm key numeric">.</button>
-                        <button class="col-sm key func">=</button>
+                        <button class="col-sm key func" v-on:click="operatorButtonPress('=')">=</button>
                     </div>
                 </div>
                 <!-- column for tape register display -->
@@ -74,7 +74,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <!-- Adds Vue framework -->
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="main.js"></script>
     </body>
 
