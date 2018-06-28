@@ -41,3 +41,6 @@ tapeRegisterArray = ['4', '+2', '----', '6']
         * convert values string to number
         * perform operation on value and previous value
         * output answer
+    * displayTapeRegister
+        * Could a `<textfield>` work for this?
+            * [Mapping an Array to Elements with `v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for)
