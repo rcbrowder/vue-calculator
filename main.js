@@ -57,10 +57,10 @@ var main = new Vue({
 
     computed: {
         displayValue() {
-            return this.previousValue ? 
-        this.currentValue ?
-        this.currentValue : this.previousValue
-        : this.currentValue
+            return this.previousValue ?
+            this.currentValue ?
+            this.currentValue : this.previousValue
+            : this.currentValue
         }
     }
 });
